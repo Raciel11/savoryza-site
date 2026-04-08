@@ -1,44 +1,35 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Velora Recipes</title>
-<style>
-body{font-family:Arial,Helvetica,sans-serif;background:#faf7f3;margin:0;padding:40px;color:#222}
-.container{max-width:900px;margin:auto}
-img{width:100%;border-radius:12px;margin:20px 0}
-h1{font-size:32px}
-h2{margin-top:30px}
-p{line-height:1.6;color:#555}
-ul,ol{line-height:1.6}
-a{display:inline-block;margin-top:20px}
-</style>
-</head>
-<body>
-<div class="container">
-<h1>Velora Recipes</h1>
-<ul>
-<li><a href="easy-chicken-dinner-recipes.html">Easy Chicken Dinner Recipes</a></li>
-<li><a href="classic-flan-recipe.html">Classic Flan Recipe</a></li>
-<li><a href="healthy-breakfast-ideas.html">Healthy Breakfast Ideas</a></li>
-<li><a href="meal-prep-lunch-recipes.html">Meal Prep Lunch Recipes</a></li>
-<li><a href="easy-air-fryer-recipes.html">Easy Air Fryer Recipes</a></li>
-<li><a href="easy-pasta-recipes.html">Easy Pasta Recipes</a></li>
-<li><a href="quick-dinner-ideas.html">Quick Dinner Ideas</a></li>
-<li><a href="healthy-smoothie-recipes.html">Healthy Smoothie Recipes</a></li>
-<li><a href="easy-dessert-recipes.html">Easy Dessert Recipes</a></li>
-<li><a href="best-breakfast-sandwiches.html">Best Breakfast Sandwiches</a></li>
-<li><a href="simple-salad-recipes.html">Simple Salad Recipes</a></li>
-<li><a href="one-pan-chicken-recipes.html">One Pan Chicken Recipes</a></li>
-<li><a href="easy-rice-recipes.html">Easy Rice Recipes</a></li>
-<li><a href="quick-soup-recipes.html">Quick Soup Recipes</a></li>
-<li><a href="healthy-lunch-ideas.html">Healthy Lunch Ideas</a></li>
-<li><a href="simple-snack-recipes.html">Simple Snack Recipes</a></li>
-<li><a href="easy-vegetarian-recipes.html">Easy Vegetarian Recipes</a></li>
-<li><a href="family-dinner-recipes.html">Family Dinner Recipes</a></li>
-<li><a href="budget-meal-ideas.html">Budget Meal Ideas</a></li>
-<li><a href="easy-shrimp-recipes.html">Easy Shrimp Recipes</a></li>
-</ul>
-</div>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Savoryza | Simple recipes. Bold flavors.</title><meta name="description" content="Savoryza homepage"><style>
+:root{--bg:#faf7f3;--surface:#fff;--text:#1d1d1f;--muted:#666c74;--primary:#b45b36;--primary-dark:#934426;--line:#eadfd7;--shadow:0 18px 50px rgba(39,27,21,.08);--radius:24px;--max:1220px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at top left,#f7e9de 0%,transparent 25%),radial-gradient(circle at top right,#f6eee8 0%,transparent 22%),var(--bg);line-height:1.7}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}.container{width:min(var(--max),92%);margin:0 auto}
+.topbar{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);background:rgba(250,247,243,.88);border-bottom:1px solid rgba(255,255,255,.55)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.08rem}.brand-mark{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),#d98d64);color:#fff;font-size:1.25rem;box-shadow:var(--shadow)}
+.nav-links,.nav-actions,.footer-links{display:flex;gap:16px;flex-wrap:wrap;align-items:center}.nav-links a,.footer-links a{color:var(--muted);font-weight:650}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:999px;font-weight:800;border:1px solid transparent;transition:.2s ease}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--primary);color:#fff}.btn-secondary{background:#fff;border-color:var(--line)}
+.hero{padding:46px 0 28px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.panel{background:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.74);box-shadow:var(--shadow);border-radius:28px}.hero-copy{padding:48px;background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(249,241,235,.94));position:relative;overflow:hidden}
+.hero-copy:after{content:"";position:absolute;right:-55px;top:-55px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(180,91,54,.16),transparent 66%)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#f8ece5;color:var(--primary-dark);font-size:.9rem;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(2.4rem,5vw,4.9rem);line-height:1.03;letter-spacing:-1.6px;margin:0 0 18px;max-width:760px}h2{font-size:2rem;line-height:1.1;letter-spacing:-.7px;margin:0 0 10px}h3{margin:0 0 8px;font-size:1.15rem}h4{margin:0 0 6px}
+.lead,.small,.muted{color:var(--muted)}.small{font-size:.95rem}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}.metric{border:1px solid var(--line);background:rgba(255,255,255,.78);border-radius:18px;padding:16px}.metric strong{display:block;margin-bottom:4px}
+.hero-image{position:relative;overflow:hidden}.hero-image img{width:100%;height:100%;min-height:520px;object-fit:cover;border-radius:28px}.overlay{position:absolute;left:20px;right:20px;bottom:20px;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.78);box-shadow:var(--shadow);border-radius:22px;padding:18px}
+.search-grid{display:grid;grid-template-columns:1fr auto;gap:10px}.search-grid input{border:1px solid var(--line);background:#fff;border-radius:16px;padding:14px 16px;font:inherit}
+section{padding:34px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.grid{display:grid;gap:18px}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.card,.recipe-card,.mini-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);transition:.2s ease}.card,.mini-card{padding:22px}.recipe-card{overflow:hidden}.recipe-card img{width:100%;height:220px;object-fit:cover}.recipe-content{padding:22px}
+.pill{display:inline-block;padding:7px 11px;border-radius:999px;background:#f8ece5;color:var(--primary-dark);font-size:.82rem;font-weight:800;margin-bottom:12px}.meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:.92rem;margin-top:12px}
+.category-link,.recipe-card,.simple-link{display:block;height:100%}.category-link:hover .card,.simple-link:hover .card,.recipe-card:hover,.mini-card:hover{transform:translateY(-2px)}
+.banner{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding:26px;border-radius:30px;background:linear-gradient(135deg,#fff2e8,#f7e4d6);border:1px solid var(--line);box-shadow:var(--shadow)}.banner-image img{height:260px;object-fit:cover;width:100%;border-radius:22px}
+.page-hero{padding:36px 0 18px}.page-hero .panel{padding:34px}.content-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}.sidebar{display:grid;gap:18px}.list{padding-left:20px}.list li{margin-bottom:10px}.article-image{border-radius:24px;overflow:hidden;margin:18px 0 20px}.article-image img{width:100%;height:360px;object-fit:cover}
+footer{padding:28px 0 56px;color:var(--muted)}.footer-wrap{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.note{padding:16px 18px;border-radius:18px;background:#f9f2ed;border:1px solid var(--line)}
+@media (max-width:980px){.hero-grid,.grid-3,.banner,.content-wrap{grid-template-columns:1fr}.hero-copy{padding:32px 24px}.hero-image img{min-height:340px}.metrics{grid-template-columns:1fr}}
+</style></head><body><div class="topbar"><div class="container nav"><a class="brand" href="index.html"><span class="brand-mark">S</span><span>Savoryza</span></a><div class="nav-links"><a href="recipes.html">Recipes</a><a href="categories.html">Categories</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="nav-actions"><a class="btn btn-secondary" href="about.html">Our Story</a><a class="btn btn-primary" href="recipes.html">Browse Recipes</a></div></div></div>
+<header class="hero"><div class="container hero-grid">
+<div class="panel hero-copy"><div class="eyebrow">Premium recipe website starter</div><h1>Stylish recipe pages that actually feel like a real site.</h1><p class="lead">This version fixes the main problems: the navigation is real, the cards open real pages, the categories have their own pages, and the recipe pages have meaningful sections instead of just one photo.</p><div class="nav-actions" style="margin-top:24px;"><a class="btn btn-primary" href="recipes.html">Browse All Recipes</a><a class="btn btn-secondary" href="categories.html">Explore Categories</a></div><div class="metrics"><div class="metric"><strong>Real navigation</strong><span class="small">Every main menu item opens a page.</span></div><div class="metric"><strong>Real content structure</strong><span class="small">Home, recipes, categories, about, contact, and privacy pages.</span></div><div class="metric"><strong>Clickable cards</strong><span class="small">Recipe and category sections now lead somewhere useful.</span></div></div></div>
+<div class="hero-image"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80" alt="Premium food photography"><div class="overlay"><h3>Find something good to cook</h3><p class="small">Recipe cards, category pages, and a cleaner site structure.</p><div class="search-grid"><input type="text" placeholder="Visual search box for future upgrade"><a class="btn btn-primary" href="recipes.html">Go to Recipes</a></div></div></div>
+</div></header>
+<main>
+<section><div class="container"><div class="section-head"><div><h2>Shop the site by category</h2><p class="small">Each category now opens its own page instead of acting like dead text.</p></div><a class="btn btn-secondary" href="categories.html">See all categories</a></div><div class="grid grid-3"><a class="category-link" href="breakfast.html"><div class="card"><div class="pill">Category</div><h3>Breakfast Recipes</h3><p class="muted">Quick morning meals, egg dishes, oats, and breakfast sandwiches.</p><div class="meta"><span>Open category page</span></div></div></a><a class="category-link" href="lunch.html"><div class="card"><div class="pill">Category</div><h3>Lunch Recipes</h3><p class="muted">Meal prep bowls, soups, sandwiches, and office-friendly recipes.</p><div class="meta"><span>Open category page</span></div></div></a><a class="category-link" href="dinner.html"><div class="card"><div class="pill">Category</div><h3>Dinner Recipes</h3><p class="muted">Weeknight meals, one-pan dishes, pasta, chicken, and seafood.</p><div class="meta"><span>Open category page</span></div></div></a><a class="category-link" href="desserts.html"><div class="card"><div class="pill">Category</div><h3>Dessert Recipes</h3><p class="muted">Flan, cakes, cookies, and simple desserts people actually make.</p><div class="meta"><span>Open category page</span></div></div></a><a class="category-link" href="healthy.html"><div class="card"><div class="pill">Category</div><h3>Healthy Recipes</h3><p class="muted">Balanced meals, smoothies, salads, and high-protein food ideas.</p><div class="meta"><span>Open category page</span></div></div></a><a class="category-link" href="budget.html"><div class="card"><div class="pill">Category</div><h3>Budget Meals</h3><p class="muted">Affordable food ideas built around simple ingredients and smart planning.</p><div class="meta"><span>Open category page</span></div></div></a></div></div></section>
+<section><div class="container"><div class="section-head"><div><h2>Featured recipes</h2><p class="small">These cards now open real recipe pages with ingredients, steps, and helpful notes.</p></div><a class="btn btn-secondary" href="recipes.html">See all recipes</a></div><div class="grid grid-3"><a class="recipe-card" href="classic-flan-recipe.html"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1200&q=80" alt="Classic Flan Recipe for Beginners"><div class="recipe-content"><div class="pill">Dessert</div><h3>Classic Flan Recipe for Beginners</h3><p class="muted">A creamy caramel dessert with simple ingredients and a clean step-by-step format.</p><div class="meta"><span>55 min</span><span>Open recipe page</span></div></div></a><a class="recipe-card" href="easy-chicken-dinner-recipes.html"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1200&q=80" alt="Easy Chicken Dinner Recipes"><div class="recipe-content"><div class="pill">Dinner</div><h3>Easy Chicken Dinner Recipes</h3><p class="muted">Fast weeknight chicken meals that feel practical and realistic.</p><div class="meta"><span>30 min</span><span>Open recipe page</span></div></div></a><a class="recipe-card" href="healthy-breakfast-ideas.html"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=1200&q=80" alt="Healthy Breakfast Ideas"><div class="recipe-content"><div class="pill">Breakfast</div><h3>Healthy Breakfast Ideas</h3><p class="muted">Quick breakfast ideas built for busy mornings and repeat readers.</p><div class="meta"><span>15 min</span><span>Open recipe page</span></div></div></a><a class="recipe-card" href="meal-prep-lunch-recipes.html"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80" alt="Meal Prep Lunch Recipes"><div class="recipe-content"><div class="pill">Lunch</div><h3>Meal Prep Lunch Recipes</h3><p class="muted">Simple lunch prep ideas that work well for weekday planning.</p><div class="meta"><span>25 min</span><span>Open recipe page</span></div></div></a><a class="recipe-card" href="easy-air-fryer-recipes.html"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Easy Air Fryer Recipes"><div class="recipe-content"><div class="pill">Dinner</div><h3>Easy Air Fryer Recipes</h3><p class="muted">Beginner-friendly air fryer recipes with strong commercial potential.</p><div class="meta"><span>20 min</span><span>Open recipe page</span></div></div></a><a class="recipe-card" href="healthy-smoothie-recipes.html"><img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=1200&q=80" alt="Healthy Smoothie Recipes"><div class="recipe-content"><div class="pill">Healthy</div><h3>Healthy Smoothie Recipes</h3><p class="muted">Easy smoothies that fit breakfast, snack, and wellness content.</p><div class="meta"><span>10 min</span><span>Open recipe page</span></div></div></a></div></div></section>
+<section><div class="container"><div class="banner"><div><div class="pill">Site upgrade</div><h2>Built more like a real food website</h2><p class="muted">Better recipe sites use clear category navigation, obvious calls to action, readable recipe pages, and internal linking between related sections.</p><div class="nav-actions" style="margin-top:18px;"><a class="btn btn-primary" href="about.html">About Savoryza</a><a class="btn btn-secondary" href="contact.html">Contact Page</a></div></div><div class="banner-image"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Styled dinner scene"></div></div></div></section>
+</main><footer><div class="container footer-wrap"><div><strong>Savoryza</strong><div class="small">Simple recipes. Bold flavors.</div></div><div class="footer-links"><a href="index.html">Home</a><a href="recipes.html">Recipes</a><a href="categories.html">Categories</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div></div></footer></body></html>
