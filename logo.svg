@@ -1,0 +1,6 @@
+
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="120" fill="white"/>
+<circle cx="60" cy="60" r="40" fill="#b85c38"/>
+<text x="120" y="70" font-size="36" font-family="Arial" fill="#222">Savoryza</text>
+</svg>
