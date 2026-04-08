@@ -1,273 +1,44 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velora Recipes | Easy Recipes for Everyday Cooking</title>
-<meta name="description" content="Modern recipe website starter for SEO, ads, and future resale value.">
+<title>Velora Recipes</title>
 <style>
-    :root{
-      --bg:#fffaf6;
-      --surface:#ffffff;
-      --surface-2:#fff4ec;
-      --text:#1f1f1f;
-      --muted:#656565;
-      --primary:#e76f51;
-      --primary-dark:#cb5c40;
-      --line:#f0ded3;
-      --shadow:0 18px 45px rgba(34, 25, 20, .08);
-      --radius:24px;
-      --radius-sm:16px;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top left, #fff1e8 0%, transparent 35%),
-        radial-gradient(circle at top right, #ffe8d8 0%, transparent 30%),
-        var(--bg);
-      line-height:1.6;
-    }
-    a{text-decoration:none;color:inherit}
-    .container{width:min(var(--max), 92%);margin:0 auto}
-    .topbar{
-      border-bottom:1px solid rgba(255,255,255,.35);
-      position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(14px);
-      background:rgba(255,250,246,.78);
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px;font-size:1.1rem}
-    .brand-badge{
-      width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
-      background:linear-gradient(135deg, var(--primary), #f4a261);color:#fff;font-size:1.2rem;
-      box-shadow:var(--shadow);
-    }
-    .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-    .nav-links a{color:var(--muted);font-weight:600}
-    .nav-links a:hover{color:var(--text)}
-    .nav-cta{padding:11px 16px;border-radius:999px;background:var(--primary);color:#fff !important;box-shadow:var(--shadow)}
-    header.hero{padding:40px 0 34px}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch}
-    .hero-left,.hero-right-card,.card,.feature,.newsletter,.monetize-card,.article-card,.ingredient-card,.tip-card{
-      background:rgba(255,255,255,.84);border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow);border-radius:24px;
-    }
-    .hero-left{
-      padding:48px;position:relative;overflow:hidden;
-      background:linear-gradient(140deg, rgba(255,255,255,.92), rgba(255,244,236,.92)), var(--surface);
-    }
-    .hero-left::after{
-      content:"";position:absolute;width:240px;height:240px;border-radius:50%;
-      background:radial-gradient(circle, rgba(231,111,81,.15), transparent 65%);right:-70px;top:-60px;
-    }
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#fff3eb;color:var(--primary-dark);font-weight:700;font-size:.9rem;margin-bottom:18px}
-    h1{font-size:clamp(2.3rem, 5vw, 4.2rem);line-height:1.03;margin:0 0 18px;max-width:760px;letter-spacing:-1.4px}
-    h2{font-size:2rem;letter-spacing:-.5px;margin:0 0 10px}
-    h3{margin:0 0 8px}
-    .hero-left p,.lead,.muted{color:var(--muted)}
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:999px;font-weight:800;transition:.2s ease;border:1px solid transparent}
-    .btn-primary{background:var(--primary);color:#fff}
-    .btn-secondary{border-color:var(--line);background:#fff;color:var(--text)}
-    .section{padding:34px 0}
-    .section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:20px;flex-wrap:wrap}
-    .grid{display:grid;gap:18px}
-    .category-grid{grid-template-columns:repeat(auto-fit, minmax(170px, 1fr))}
-    .recipe-grid,.feature-grid,.monetize-grid,.two-col{grid-template-columns:repeat(auto-fit, minmax(250px, 1fr))}
-    .category-card,.card,.feature,.monetize-card,.article-card,.ingredient-card,.tip-card{padding:22px;background:var(--surface);border:1px solid var(--line)}
-    .category-card{background:linear-gradient(180deg, #fff, #fff7f2)}
-    .icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#fff1e8;font-size:1.3rem;margin-bottom:14px}
-    .pill{font-size:.82rem;font-weight:800;color:var(--primary-dark);background:#fff1e8;padding:7px 11px;border-radius:999px}
-    .small{font-size:.95rem;color:var(--muted)}
-    .recipe-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:.92rem}
-    .hero-right{display:grid;gap:18px}
-    .search-wrap{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-    .search-wrap input{flex:1;min-width:220px;padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:#fff;font-size:1rem;outline:none}
-    .search-wrap button,.newsletter button{border:none;background:var(--primary);color:#fff;padding:14px 18px;border-radius:16px;font-weight:800;cursor:pointer}
-    .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
-    .mini-tile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
-    .mini-tile strong{display:block;margin-bottom:4px}
-    .mini-tile span{font-size:.92rem;color:var(--muted)}
-    .banner{padding:26px;background:linear-gradient(135deg, #fff1e6, #ffe4d2);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
-    .banner-box{background:#fff;border:2px dashed var(--primary);border-radius:20px;padding:18px;text-align:center;color:var(--muted);font-weight:700}
-    .newsletter{padding:30px;background:linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,239,229,.94));border:1px solid var(--line)}
-    .newsletter form{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .newsletter input{flex:1;min-width:240px;padding:14px 16px;border-radius:16px;border:1px solid var(--line);font-size:1rem;outline:none}
-    .article-hero{padding:42px 0 20px}
-    .article-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
-    .article-card h1{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:12px}
-    .list{padding-left:18px}
-    .list li{margin-bottom:10px}
-    footer{padding:30px 0 60px;color:var(--muted)}
-    .footer-wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
-    @media (max-width:960px){.hero-grid,.banner,.article-layout{grid-template-columns:1fr}.hero-left{padding:34px 24px}}
-    @media (max-width:700px){.mini-grid{grid-template-columns:1fr}.newsletter,.hero-right-card,.category-card,.card,.feature,.monetize-card,.article-card,.ingredient-card,.tip-card{border-radius:20px}}
+body{font-family:Arial,Helvetica,sans-serif;background:#faf7f3;margin:0;padding:40px;color:#222}
+.container{max-width:900px;margin:auto}
+img{width:100%;border-radius:12px;margin:20px 0}
+h1{font-size:32px}
+h2{margin-top:30px}
+p{line-height:1.6;color:#555}
+ul,ol{line-height:1.6}
+a{display:inline-block;margin-top:20px}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="container nav">
-    <a href="index.html" class="brand"><span class="brand-badge">🍽️</span><span>Velora Recipes</span></a>
-    <div class="nav-links">
-      <a href="index.html#categories">Categories</a>
-      <a href="index.html#recipes">Recipes</a>
-      <a href="index.html#monetization">Monetization</a>
-      <a href="index.html#newsletter" class="nav-cta">Subscribe</a>
-    </div>
-  </div>
+<div class="container">
+<h1>Velora Recipes</h1>
+<ul>
+<li><a href="easy-chicken-dinner-recipes.html">Easy Chicken Dinner Recipes</a></li>
+<li><a href="classic-flan-recipe.html">Classic Flan Recipe</a></li>
+<li><a href="healthy-breakfast-ideas.html">Healthy Breakfast Ideas</a></li>
+<li><a href="meal-prep-lunch-recipes.html">Meal Prep Lunch Recipes</a></li>
+<li><a href="easy-air-fryer-recipes.html">Easy Air Fryer Recipes</a></li>
+<li><a href="easy-pasta-recipes.html">Easy Pasta Recipes</a></li>
+<li><a href="quick-dinner-ideas.html">Quick Dinner Ideas</a></li>
+<li><a href="healthy-smoothie-recipes.html">Healthy Smoothie Recipes</a></li>
+<li><a href="easy-dessert-recipes.html">Easy Dessert Recipes</a></li>
+<li><a href="best-breakfast-sandwiches.html">Best Breakfast Sandwiches</a></li>
+<li><a href="simple-salad-recipes.html">Simple Salad Recipes</a></li>
+<li><a href="one-pan-chicken-recipes.html">One Pan Chicken Recipes</a></li>
+<li><a href="easy-rice-recipes.html">Easy Rice Recipes</a></li>
+<li><a href="quick-soup-recipes.html">Quick Soup Recipes</a></li>
+<li><a href="healthy-lunch-ideas.html">Healthy Lunch Ideas</a></li>
+<li><a href="simple-snack-recipes.html">Simple Snack Recipes</a></li>
+<li><a href="easy-vegetarian-recipes.html">Easy Vegetarian Recipes</a></li>
+<li><a href="family-dinner-recipes.html">Family Dinner Recipes</a></li>
+<li><a href="budget-meal-ideas.html">Budget Meal Ideas</a></li>
+<li><a href="easy-shrimp-recipes.html">Easy Shrimp Recipes</a></li>
+</ul>
 </div>
-
-<header class="hero">
-  <div class="container hero-grid">
-    <div class="hero-left">
-      <div class="eyebrow">✨ Modern recipe website starter</div>
-      <h1>Beautiful recipes, clean design, and a site built to grow into a real digital asset.</h1>
-      <p class="lead">
-        This homepage is designed to look professional, feel premium, and give you a strong base for future SEO, ad revenue, affiliate links, and eventually selling the site.
-      </p>
-      <div class="hero-actions">
-        <a href="#recipes" class="btn btn-primary">Explore Recipes</a>
-        <a href="#monetization" class="btn btn-secondary">See Revenue Model</a>
-      </div>
-      <div class="grid recipe-grid">
-        <div class="card"><h3>SEO Ready</h3><p class="muted">Built to expand into article pages and long-tail traffic.</p></div>
-        <div class="card"><h3>Ad Friendly</h3><p class="muted">Clear sections for future display ad placements.</p></div>
-        <div class="card"><h3>Sellable Later</h3><p class="muted">Traffic + revenue can turn this into a website asset.</p></div>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="hero-right-card" style="padding:26px;background:linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,245,239,.96));">
-        <h3 style="font-size:1.35rem;">Search recipe ideas</h3>
-        <p class="small">Beautiful placeholder for future site search or recipe index.</p>
-        <div class="search-wrap">
-          <input type="text" placeholder="Search recipes, ingredients, or meal ideas">
-          <button type="button">Search</button>
-        </div>
-        <div class="mini-grid">
-          <div class="mini-tile"><strong>Breakfast</strong><span>Quick morning meals</span></div>
-          <div class="mini-tile"><strong>Dinner</strong><span>Easy weeknight dishes</span></div>
-          <div class="mini-tile"><strong>Desserts</strong><span>Evergreen sweet recipes</span></div>
-          <div class="mini-tile"><strong>Healthy</strong><span>Meal prep and protein ideas</span></div>
-        </div>
-      </div>
-      <div class="hero-right-card" style="padding:26px;">
-        <h3>Why this niche works</h3>
-        <p class="small">Recipe websites can scale with high-volume keywords, Pinterest traffic, repeat visitors, and strong ad monetization.</p>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="section" id="categories">
-    <div class="container">
-      <div class="section-head">
-        <div><h2>Main categories</h2><p class="small">Broad sections to organize content and create room for dozens of future recipe pages.</p></div>
-      </div>
-      <div class="grid category-grid">
-        <div class="category-card"><div class="icon">🥞</div><h3>Breakfast</h3><p>Simple morning meals, protein ideas, and quick make-ahead recipes.</p></div>
-        <div class="category-card"><div class="icon">🥗</div><h3>Lunch</h3><p>Meal prep bowls, sandwiches, salads, and easy work-friendly recipes.</p></div>
-        <div class="category-card"><div class="icon">🍝</div><h3>Dinner</h3><p>Easy family dinners, one-pan meals, pasta dishes, and quick chicken recipes.</p></div>
-        <div class="category-card"><div class="icon">🍰</div><h3>Desserts</h3><p>Flan, cakes, cookies, and simple sweets that can attract repeat visitors.</p></div>
-        <div class="category-card"><div class="icon">🥑</div><h3>Healthy Meals</h3><p>Low-carb, high-protein, balanced meal ideas, and smart food swaps.</p></div>
-        <div class="category-card"><div class="icon">💸</div><h3>Budget Recipes</h3><p>Cheap meal ideas for families, students, and people trying to save money.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="recipes">
-    <div class="container">
-      <div class="section-head">
-        <div><h2>Featured recipe pages</h2><p class="small">These pages are already created and connected below.</p></div>
-      </div>
-      <div class="grid recipe-grid">
-        <article class="card">
-          <div class="pill">Dinner</div>
-          <h3 style="margin-top:14px;"><a href="easy-chicken-dinner-recipes.html">10 Easy Chicken Dinner Recipes for Busy Weeknights</a></h3>
-          <p>Strong SEO topic with broad appeal and easy monetization through ads and kitchen affiliate products.</p>
-          <div class="recipe-meta"><span>⏱️ 25 min</span><span>🔥 Beginner friendly</span></div>
-        </article>
-        <article class="card">
-          <div class="pill">Dessert</div>
-          <h3 style="margin-top:14px;"><a href="classic-flan-recipe.html">Classic Flan Recipe for Beginners</a></h3>
-          <p>One of your signature pages and a great fit with dessert-focused traffic.</p>
-          <div class="recipe-meta"><span>🍮 Simple ingredients</span><span>📈 Great brand fit</span></div>
-        </article>
-        <article class="card">
-          <div class="pill">Breakfast</div>
-          <h3 style="margin-top:14px;"><a href="healthy-breakfast-ideas.html">7 Healthy Breakfast Ideas You Can Make Fast</a></h3>
-          <p>Perfect for quick meals, weight-loss breakfast searches, and meal prep inspiration.</p>
-          <div class="recipe-meta"><span>🥣 Easy prep</span><span>📱 Social friendly</span></div>
-        </article>
-        <article class="card">
-          <div class="pill">Lunch</div>
-          <h3 style="margin-top:14px;"><a href="meal-prep-lunch-recipes.html">Best Meal Prep Lunch Recipes for the Week</a></h3>
-          <p>Practical topic with strong repeat traffic potential.</p>
-          <div class="recipe-meta"><span>📦 Weekly prep</span><span>🥗 Healthy angle</span></div>
-        </article>
-        <article class="card">
-          <div class="pill">Trending</div>
-          <h3 style="margin-top:14px;"><a href="easy-air-fryer-recipes.html">Easy Air Fryer Recipes for Beginners</a></h3>
-          <p>Commercial topic that works especially well for affiliate links later.</p>
-          <div class="recipe-meta"><span>🍗 Popular tool</span><span>🛒 Good affiliate fit</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="banner">
-        <div>
-          <h3 style="font-size:1.6rem;">Premium ad placement area</h3>
-          <p class="small">When your site has traffic, this section can hold Google AdSense or another ad unit.</p>
-        </div>
-        <div class="banner-box">Display Ad Placeholder</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="monetization">
-    <div class="container">
-      <div class="section-head">
-        <div><h2>How this website can make money</h2><p class="small">Traffic first, monetization next, then resale value.</p></div>
-      </div>
-      <div class="monetize-grid">
-        <div class="monetize-card"><h3>Display ads</h3><p>Ad networks can pay you based on visits and page views.</p></div>
-        <div class="monetize-card"><h3>Affiliate links</h3><p>Recommend blenders, air fryers, cookware, and cookbooks.</p></div>
-        <div class="monetize-card"><h3>Sponsored content</h3><p>Food brands may later pay for placement.</p></div>
-        <div class="monetize-card"><h3>Future website sale</h3><p>Traffic plus monthly revenue can turn the site into a digital property.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="newsletter">
-    <div class="container">
-      <div class="newsletter">
-        <h2 style="margin:0 0 10px;">Build an email list from day one</h2>
-        <p class="small" style="margin:0;">This creates repeat traffic and makes the site more valuable later.</p>
-        <form>
-          <input type="email" placeholder="Enter your email address">
-          <button type="button">Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer-wrap">
-    <div>
-      <strong>Velora Recipes</strong>
-      <p class="small" style="margin:8px 0 0;">A recipe website starter built for traffic, ad monetization, and future resale value.</p>
-    </div>
-    <div class="small">Built as a static site, ready for GitHub Pages.</div>
-  </div>
-</footer>
 </body>
 </html>

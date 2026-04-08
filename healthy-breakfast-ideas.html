@@ -1,186 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>7 Healthy Breakfast Ideas You Can Make Fast | Velora Recipes</title>
-<meta name="description" content="Healthy breakfast content is a strong evergreen niche because users often search for routines they can repeat every week.">
+<title>Healthy Breakfast Ideas</title>
 <style>
-    :root{
-      --bg:#fffaf6;
-      --surface:#ffffff;
-      --surface-2:#fff4ec;
-      --text:#1f1f1f;
-      --muted:#656565;
-      --primary:#e76f51;
-      --primary-dark:#cb5c40;
-      --line:#f0ded3;
-      --shadow:0 18px 45px rgba(34, 25, 20, .08);
-      --radius:24px;
-      --radius-sm:16px;
-      --max:1180px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top left, #fff1e8 0%, transparent 35%),
-        radial-gradient(circle at top right, #ffe8d8 0%, transparent 30%),
-        var(--bg);
-      line-height:1.6;
-    }
-    a{text-decoration:none;color:inherit}
-    .container{width:min(var(--max), 92%);margin:0 auto}
-    .topbar{
-      border-bottom:1px solid rgba(255,255,255,.35);
-      position:sticky;top:0;z-index:50;
-      backdrop-filter: blur(14px);
-      background:rgba(255,250,246,.78);
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px;font-size:1.1rem}
-    .brand-badge{
-      width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
-      background:linear-gradient(135deg, var(--primary), #f4a261);color:#fff;font-size:1.2rem;
-      box-shadow:var(--shadow);
-    }
-    .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-    .nav-links a{color:var(--muted);font-weight:600}
-    .nav-links a:hover{color:var(--text)}
-    .nav-cta{padding:11px 16px;border-radius:999px;background:var(--primary);color:#fff !important;box-shadow:var(--shadow)}
-    header.hero{padding:40px 0 34px}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:stretch}
-    .hero-left,.hero-right-card,.card,.feature,.newsletter,.monetize-card,.article-card,.ingredient-card,.tip-card{
-      background:rgba(255,255,255,.84);border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow);border-radius:24px;
-    }
-    .hero-left{
-      padding:48px;position:relative;overflow:hidden;
-      background:linear-gradient(140deg, rgba(255,255,255,.92), rgba(255,244,236,.92)), var(--surface);
-    }
-    .hero-left::after{
-      content:"";position:absolute;width:240px;height:240px;border-radius:50%;
-      background:radial-gradient(circle, rgba(231,111,81,.15), transparent 65%);right:-70px;top:-60px;
-    }
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#fff3eb;color:var(--primary-dark);font-weight:700;font-size:.9rem;margin-bottom:18px}
-    h1{font-size:clamp(2.3rem, 5vw, 4.2rem);line-height:1.03;margin:0 0 18px;max-width:760px;letter-spacing:-1.4px}
-    h2{font-size:2rem;letter-spacing:-.5px;margin:0 0 10px}
-    h3{margin:0 0 8px}
-    .hero-left p,.lead,.muted{color:var(--muted)}
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:999px;font-weight:800;transition:.2s ease;border:1px solid transparent}
-    .btn-primary{background:var(--primary);color:#fff}
-    .btn-secondary{border-color:var(--line);background:#fff;color:var(--text)}
-    .section{padding:34px 0}
-    .section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:20px;flex-wrap:wrap}
-    .grid{display:grid;gap:18px}
-    .category-grid{grid-template-columns:repeat(auto-fit, minmax(170px, 1fr))}
-    .recipe-grid,.feature-grid,.monetize-grid,.two-col{grid-template-columns:repeat(auto-fit, minmax(250px, 1fr))}
-    .category-card,.card,.feature,.monetize-card,.article-card,.ingredient-card,.tip-card{padding:22px;background:var(--surface);border:1px solid var(--line)}
-    .category-card{background:linear-gradient(180deg, #fff, #fff7f2)}
-    .icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:#fff1e8;font-size:1.3rem;margin-bottom:14px}
-    .pill{font-size:.82rem;font-weight:800;color:var(--primary-dark);background:#fff1e8;padding:7px 11px;border-radius:999px}
-    .small{font-size:.95rem;color:var(--muted)}
-    .recipe-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:.92rem}
-    .hero-right{display:grid;gap:18px}
-    .search-wrap{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-    .search-wrap input{flex:1;min-width:220px;padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:#fff;font-size:1rem;outline:none}
-    .search-wrap button,.newsletter button{border:none;background:var(--primary);color:#fff;padding:14px 18px;border-radius:16px;font-weight:800;cursor:pointer}
-    .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
-    .mini-tile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
-    .mini-tile strong{display:block;margin-bottom:4px}
-    .mini-tile span{font-size:.92rem;color:var(--muted)}
-    .banner{padding:26px;background:linear-gradient(135deg, #fff1e6, #ffe4d2);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
-    .banner-box{background:#fff;border:2px dashed var(--primary);border-radius:20px;padding:18px;text-align:center;color:var(--muted);font-weight:700}
-    .newsletter{padding:30px;background:linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,239,229,.94));border:1px solid var(--line)}
-    .newsletter form{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .newsletter input{flex:1;min-width:240px;padding:14px 16px;border-radius:16px;border:1px solid var(--line);font-size:1rem;outline:none}
-    .article-hero{padding:42px 0 20px}
-    .article-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
-    .article-card h1{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:12px}
-    .list{padding-left:18px}
-    .list li{margin-bottom:10px}
-    footer{padding:30px 0 60px;color:var(--muted)}
-    .footer-wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:26px}
-    @media (max-width:960px){.hero-grid,.banner,.article-layout{grid-template-columns:1fr}.hero-left{padding:34px 24px}}
-    @media (max-width:700px){.mini-grid{grid-template-columns:1fr}.newsletter,.hero-right-card,.category-card,.card,.feature,.monetize-card,.article-card,.ingredient-card,.tip-card{border-radius:20px}}
+body{font-family:Arial,Helvetica,sans-serif;background:#faf7f3;margin:0;padding:40px;color:#222}
+.container{max-width:900px;margin:auto}
+img{width:100%;border-radius:12px;margin:20px 0}
+h1{font-size:32px}
+h2{margin-top:30px}
+p{line-height:1.6;color:#555}
+ul,ol{line-height:1.6}
+a{display:inline-block;margin-top:20px}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="container nav">
-    <a href="index.html" class="brand"><span class="brand-badge">🍽️</span><span>Velora Recipes</span></a>
-    <div class="nav-links">
-      <a href="index.html#categories">Categories</a>
-      <a href="index.html#recipes">Recipes</a>
-      <a href="index.html#monetization">Monetization</a>
-      <a href="index.html#newsletter" class="nav-cta">Subscribe</a>
-    </div>
-  </div>
+<div class="container">
+
+<h1>Healthy Breakfast Ideas</h1>
+
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80" alt="Healthy Breakfast Ideas">
+
+<p>This is a premium long-form recipe article designed to help improve SEO and increase your chances of monetization.</p>
+
+<h2>Ingredients</h2>
+<ul>
+<li>Main ingredient</li>
+<li>Salt</li>
+<li>Pepper</li>
+<li>Olive oil</li>
+<li>Optional spices</li>
+</ul>
+
+<h2>Instructions</h2>
+<ol>
+<li>Prepare ingredients</li>
+<li>Heat pan or oven</li>
+<li>Cook until ready</li>
+<li>Serve and enjoy</li>
+</ol>
+
+<h2>Tips</h2>
+<p>These recipes are flexible and can be adjusted based on your preferences.</p>
+
+<h2>Why This Recipe Works</h2>
+<p>This section helps improve SEO and keeps readers engaged longer.</p>
+
+<a href="index.html">Back to Home</a>
+
 </div>
-
-<main class="article-hero">
-  <div class="container article-layout">
-    <article class="article-card">
-      <div class="pill">Breakfast</div>
-      <h1>7 Healthy Breakfast Ideas You Can Make Fast</h1>
-      <p class="lead">Breakfast content works well because people are always looking for fast, healthy, and practical options. This page gives you a strong foundation for both search traffic and Pinterest-style visual content later.</p>
-      <div class="recipe-meta">
-        <span>🍽️ Easy recipe</span>
-        <span>🧑‍🍳 Beginner friendly</span>
-        <span>📈 SEO-ready article page</span>
-      </div>
-
-      <section class="section">
-        <h2>Ingredients</h2>
-        <ul class="list"><li>Eggs</li><li>Greek yogurt</li><li>Oats</li><li>Fresh fruit</li><li>Nut butter</li><li>Whole grain bread</li><li>Protein-rich toppings such as seeds or nuts</li></ul>
-      </section>
-
-      <section class="section">
-        <h2>How to make it</h2>
-        <ol class="list"><li>Create a short list of seven breakfast ideas such as overnight oats, yogurt bowls, avocado toast, egg wraps, smoothie bowls, oatmeal, and cottage cheese fruit cups.</li><li>Keep each recipe simple with a short ingredients list and quick preparation.</li><li>Organize the page so each idea has its own mini section for readability.</li><li>Add optional swaps for lower sugar, higher protein, or budget-friendly versions.</li></ol>
-      </section>
-
-      <section class="section">
-        <h2>Helpful tips</h2>
-        <ul class="list"><li>Use consistent section headings to improve readability and SEO.</li><li>Healthy breakfast pages often perform better when the meals are fast and realistic.</li><li>Later you can split each idea into its own dedicated recipe page.</li></ul>
-      </section>
-
-      <section class="section">
-        <h2>Why this page matters</h2>
-        <p class="small">Healthy breakfast content is a strong evergreen niche because users often search for routines they can repeat every week.</p>
-      </section>
-
-      <a href="index.html" class="btn btn-secondary">← Back to homepage</a>
-    </article>
-
-    <aside class="grid">
-      <div class="ingredient-card">
-        <h3>Good for monetization</h3>
-        <p class="small">This page can later support display ads, affiliate links, and internal links to related recipes.</p>
-      </div>
-      <div class="tip-card">
-        <h3>Internal linking idea</h3>
-        <p class="small">Connect this page to category pages, related ingredient guides, and similar recipes for better SEO.</p>
-      </div>
-      <div class="tip-card">
-        <h3>Future upgrade</h3>
-        <p class="small">Later we can add images, jump-to-recipe buttons, nutrition blocks, and schema markup.</p>
-      </div>
-    </aside>
-  </div>
-</main>
-
-<footer>
-  <div class="container footer-wrap">
-    <div>
-      <strong>Velora Recipes</strong>
-      <p class="small" style="margin:8px 0 0;">A recipe website starter built for traffic, ad monetization, and future resale value.</p>
-    </div>
-    <div class="small">Built as a static site, ready for GitHub Pages.</div>
-  </div>
-</footer>
 </body>
 </html>
